@@ -1,0 +1,473 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.titulo {
+    color:rgba(241, 6, 6, 0.886);
+    margin-left: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    
+}
+
+a.titulo {
+    color:rgba(241, 6, 6, 0.886);
+}
+
+header {
+    grid-area: header;
+}
+
+.navbar{
+    list-style-type: none;
+    text-align: center; 
+    display: flex;  
+    align-items: center;
+    justify-content: right; 
+}
+
+div#navbarNav {
+    justify-content: right; 
+}
+
+.navbar .navbar-nav .nav-item{
+    font-style: initial;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar-nav{
+    background-color: rgb(222, 57, 57); 
+}
+
+.nav-link{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.parrafo_index{
+    font-style: normal;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+    margin-left: 100px;
+    padding-top: 50px;
+}
+
+.imagen_index {
+    width: 300px;
+    height: 150px;
+    margin-right: 160px;
+    margin-top: 80px;
+    float: right;
+    
+}
+
+section {
+    border: double 2px rgb(229, 96, 96);
+    width: 275px;
+    height: 475px;
+    margin-left: 10px;
+
+    /* los acomodo con flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagen{
+    width: 225px;
+    height: 125px;
+    margin-top: 10px;
+
+}
+
+button {
+    border-radius: 5px;
+    background-color: rgb(229, 96, 96);
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 5px 5px 2.5px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+}
+
+.texto{
+    overflow: hidden;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 13px;
+}
+
+.contenedor_noticia{
+    border: double 2px rgb(229, 96, 96);
+    width: 98%;
+    height: 150px;
+
+    /* los acomodo con flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.imagen_noticia{
+    width: 200px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+.texto_noticia{
+    overflow: hidden;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.contenedor_formulario{
+    border: double 2px rgb(229, 96, 96);
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.parrafo_contacto{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.label_contacto {
+    margin-left: 5px;
+    display: block;
+    font-size: 20px;
+}
+
+.input_contacto {    
+    margin-left: 5px;
+    display: inline-block;
+    width: 95%;
+    padding-top: 20px;
+    margin-top: 5px;
+}
+
+.div_nombre {
+    margin-top: 10px;
+}
+
+.div_correo {
+    margin-top: 15px;
+}
+
+.div_mensaje {
+    margin-top: 15px;
+}
+
+.input_contacto_mensaje {
+    padding-top: 150px;
+}
+
+.boton_contacto{
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.redes{
+    width: 20px;
+    height: 20px;
+}
+
+
+.linea {
+    border-top: 1px;
+    border-bottom: 1px;
+    min-height: 1px;
+    padding: 0;
+    background: black;
+    margin-bottom: 10px;
+}
+  
+
+footer{
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+    grid-area: footer;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.texto_footer{
+    color: #999;
+    font: 12px Roboto, sans-serif;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a.texto_footer {
+    color: #999;
+}
+
+
+
+/* TRABAJO CON GRID */
+
+/* Index */
+
+.parrafo_index {
+    grid-area: parrafo_index;
+}
+
+.imagen_index {
+    grid-area: imagen_index;
+}
+
+/* Peliculas */
+
+.contenedor_pelicula_ironMan {
+    grid-area: contenedor_pelicula_ironMan;
+}
+
+.contenedor_pelicula_capitanAmerica {
+    grid-area: contenedor_pelicula_capitanAmerica;
+}
+
+.contenedor_pelicula_thor {
+    grid-area: contenedor_pelicula_thor;
+}
+
+.contenedor_pelicula_blackWidow {
+    grid-area: contenedor_pelicula_blackWidow;
+}
+
+.contenedor_pelicula_spiderMan {
+    grid-area: contenedor_pelicula_spiderMan;
+}
+
+.contenedor_pelicula_losVengadores {
+    grid-area: contenedor_pelicula_losVengadores;
+}
+
+/* Series */
+
+.contenedor_serie_agentsOfShield {
+    grid-area: contenedor_serie_agentsOfShield;
+}
+
+.contenedor_serie_wandaVision {
+    grid-area: contenedor_serie_wandaVision;
+}
+
+.contenedor_serie_loki {
+    grid-area: contenedor_serie_loki;
+}
+
+.contenedor_serie_hawkeye {
+    grid-area: contenedor_serie_hawkeye;
+}
+
+.contenedor_serie_sheHulk {
+    grid-area: contenedor_serie_sheHulk;
+}
+
+.contenedor_serie_daredevil {
+    grid-area: contenedor_serie_daredevil;
+}
+
+/* Noticias */
+
+.contenedor_noticia_daredevilSheHulk {
+    grid-area: contenedor_noticia_daredevilSheHulk;
+}
+
+.contenedor_noticia_hombreLoboNoche {
+    grid-area: contenedor_noticia_hombreLoboNoche;
+}
+
+.contenedor_noticia_blackPanter {
+    grid-area: contenedor_noticia_blackPanter;
+}
+
+.gridPadrePeliculas {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "contenedor_pelicula_ironMan contenedor_pelicula_capitanAmerica  contenedor_pelicula_blackWidow"
+    "contenedor_pelicula_ironMan contenedor_pelicula_capitanAmerica  contenedor_pelicula_blackWidow"
+    "contenedor_pelicula_thor contenedor_pelicula_spiderMan contenedor_pelicula_losVengadores"
+    "contenedor_pelicula_thor contenedor_pelicula_spiderMan contenedor_pelicula_losVengadores"
+    "footer footer footer"
+    ;
+}
+
+
+.gridPadreSeries {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "contenedor_serie_agentsOfShield contenedor_serie_wandaVision  contenedor_serie_loki"
+    "contenedor_serie_agentsOfShield contenedor_serie_wandaVision  contenedor_serie_loki"
+    "contenedor_serie_hawkeye contenedor_serie_sheHulk contenedor_serie_daredevil"
+    "contenedor_serie_hawkeye contenedor_serie_sheHulk contenedor_serie_daredevil"
+    "footer footer footer"
+    ;
+}
+
+
+.gridPadreNoticias {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "contenedor_noticia_daredevilSheHulk"
+    "contenedor_noticia_hombreLoboNoche"
+    "contenedor_noticia_blackPanter"
+    "footer"
+    ;
+}
+
+
+/* TABLETA */
+
+@media (min-width:700px) and (max-width:1100px) {
+    .gridPadrePeliculas {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "contenedor_pelicula_ironMan contenedor_pelicula_capitanAmerica"
+        "contenedor_pelicula_ironMan contenedor_pelicula_capitanAmerica"
+        "contenedor_pelicula_blackWidow contenedor_pelicula_thor"
+        "contenedor_pelicula_blackWidow contenedor_pelicula_thor"
+        "contenedor_pelicula_spiderMan contenedor_pelicula_losVengadores"
+        "contenedor_pelicula_spiderMan contenedor_pelicula_losVengadores"
+        "footer footer"
+        ;
+    }
+    
+    
+    .gridPadreSeries {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "contenedor_serie_agentsOfShield contenedor_serie_wandaVision"
+        "contenedor_serie_agentsOfShield contenedor_serie_wandaVision"
+        "contenedor_serie_loki contenedor_serie_hawkeye"
+        "contenedor_serie_loki contenedor_serie_hawkeye"
+        "contenedor_serie_sheHulk contenedor_serie_daredevil"
+        "contenedor_serie_sheHulk contenedor_serie_daredevil"
+        "footer footer"
+        ;
+    }
+
+    .gridPadreNoticias {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "contenedor_noticia_daredevilSheHulk"
+        "contenedor_noticia_hombreLoboNoche"
+        "contenedor_noticia_blackPanter"
+        "footer"
+        ;
+    }
+
+    .contenedor_noticia{
+        border: double 2px rgb(229, 96, 96);
+        width: 98%;
+        height: 320px;
+    
+        /* los acomodo con flex */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .imagen_noticia{
+        width: 250px;
+        height: 150px;
+        margin-left: 10px;
+    }
+}
+
+/* VISTA MOBIL */
+
+@media (max-width:699px) {
+    .gridPadrePeliculas {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "contenedor_pelicula_ironMan"
+        "contenedor_pelicula_capitanAmerica"
+        "contenedor_pelicula_blackWidow"
+        "contenedor_pelicula_thor"
+        "contenedor_pelicula_spiderMan"
+        "contenedor_pelicula_losVengadores"
+        "footer"
+        ;
+    }
+    
+    
+    .gridPadreSeries {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "contenedor_serie_agentsOfShield"
+        "contenedor_serie_wandaVision"
+        "contenedor_serie_loki"
+        "contenedor_serie_hawkeye"
+        "contenedor_serie_sheHulk"
+        " contenedor_serie_daredevil"
+        "footer"
+        ;
+    }
+
+    .gridPadreNoticias {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "contenedor_noticia_daredevilSheHulk"
+        "contenedor_noticia_hombreLoboNoche"
+        "contenedor_noticia_blackPanter"
+        "footer"
+        ;
+    }
+
+    .contenedor_noticia {
+        border: double 2px rgb(229, 96, 96);
+        width: 275px;
+        height: 500px;
+    
+        /* los acomodo con flex */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .imagen_noticia{
+        width: 225px;
+        height: 125px;
+        margin-top: 2px;
+        margin-right: 15px;
+    
+    }
+}
