@@ -1,0 +1,290 @@
+@mixin parrafoInicial {
+    font-style: normal;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+    margin-left: 100px;
+    padding-top: 50px;
+    text-align: justify;
+}
+
+.parrafo_index {
+    @include parrafoInicial()
+}
+
+.imagen_index {
+    width: 300px;
+    height: 150px;
+    margin-top: 150px;
+    margin-left: 200px;
+    
+}
+
+.div_inicial {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    border: double 2px $color-principal;
+    width: 275px;
+    height: 475px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    /* los acomodo con flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    .imagen{
+        width: 225px;
+        height: 125px;
+        margin-top: 10px;
+    }
+    
+    button {
+        border-radius: 5px;
+        background-color: $color-principal;
+        width: 100px;
+        height: 50px;
+        cursor: pointer;
+        box-shadow: 5px 5px 2.5px 0px rgba(0, 0, 0, 0.5);
+        margin-bottom: 25px;
+    }
+    
+    .texto{
+        overflow: hidden;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 13px;
+    }
+}
+
+.contenedor_noticia{
+    border: double 2px $color-principal;
+    width: 98%;
+    height: 150px;
+
+    /* los acomodo con flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+
+    .imagen_noticia{
+        width: 200px;
+        height: 100px;
+        margin-left: 10px;
+    }
+    
+    .texto_noticia{
+        overflow: hidden;
+        margin-top: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.parrafo_contacto{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contenedor_formulario{
+    border: double 2px $color-principal;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 25px;
+
+    .div_nombre {
+        margin-top: 10px;
+    }
+    
+    .div_correo {
+        margin-top: 15px;
+    }
+    
+    .div_mensaje {
+        @extend .div_correo;
+
+        .input_contacto_mensaje {
+            padding-top: 150px;
+        }
+    }
+
+    .label_contacto {
+        margin-left: 5px;
+        display: block;
+        font-size: 20px;
+    }
+    
+    .input_contacto {    
+        margin-left: 5px;
+        display: inline-block;
+        width: 95%;
+        padding-top: 20px;
+        margin-top: 5px;
+    }
+
+    .boton_contacto{
+        margin-left: 60px;
+        margin-top: 20px;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+    }
+}
+
+
+/* TRABAJO CON GRID */
+
+/* Index */
+
+.parrafo_index {
+    grid-area: parrafo_index;
+}
+
+.imagen_index {
+    grid-area: imagen_index;
+}
+
+/* Peliculas */
+
+.contenedor_pelicula_ironMan {
+    grid-area: contenedor_pelicula_ironMan;
+}
+
+.contenedor_pelicula_capitanAmerica {
+    grid-area: contenedor_pelicula_capitanAmerica;
+}
+
+.contenedor_pelicula_thor {
+    grid-area: contenedor_pelicula_thor;
+}
+
+.contenedor_pelicula_blackWidow {
+    grid-area: contenedor_pelicula_blackWidow;
+}
+
+.contenedor_pelicula_spiderMan {
+    grid-area: contenedor_pelicula_spiderMan;
+}
+
+.contenedor_pelicula_losVengadores {
+    grid-area: contenedor_pelicula_losVengadores;
+}
+
+/* Series */
+
+.contenedor_serie_agentsOfShield {
+    grid-area: contenedor_serie_agentsOfShield;
+}
+
+.contenedor_serie_wandaVision {
+    grid-area: contenedor_serie_wandaVision;
+}
+
+.contenedor_serie_loki {
+    grid-area: contenedor_serie_loki;
+}
+
+.contenedor_serie_hawkeye {
+    grid-area: contenedor_serie_hawkeye;
+}
+
+.contenedor_serie_sheHulk {
+    grid-area: contenedor_serie_sheHulk;
+}
+
+.contenedor_serie_daredevil {
+    grid-area: contenedor_serie_daredevil;
+}
+
+/* Noticias */
+
+.contenedor_noticia_daredevilSheHulk {
+    grid-area: contenedor_noticia_daredevilSheHulk;
+}
+
+.contenedor_noticia_hombreLoboNoche {
+    grid-area: contenedor_noticia_hombreLoboNoche;
+}
+
+.contenedor_noticia_blackPanter {
+    grid-area: contenedor_noticia_blackPanter;
+}
+
+/* Contacto */
+
+.parrafo_contacto {
+    grid-area: parrafo_contacto;
+}
+
+.contenedor_formulario {
+    grid-area: contenedor_formulario;
+}
+
+.gridPadreIndex {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "parrafo_index imagen_index"
+    "footer footer"
+    ;
+}
+
+.gridPadrePeliculas {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "contenedor_pelicula_ironMan contenedor_pelicula_capitanAmerica  contenedor_pelicula_blackWidow"
+    "contenedor_pelicula_ironMan contenedor_pelicula_capitanAmerica  contenedor_pelicula_blackWidow"
+    "contenedor_pelicula_thor contenedor_pelicula_spiderMan contenedor_pelicula_losVengadores"
+    "contenedor_pelicula_thor contenedor_pelicula_spiderMan contenedor_pelicula_losVengadores"
+    "footer footer footer"
+    ;
+}
+
+
+.gridPadreSeries {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "contenedor_serie_agentsOfShield contenedor_serie_wandaVision  contenedor_serie_loki"
+    "contenedor_serie_agentsOfShield contenedor_serie_wandaVision  contenedor_serie_loki"
+    "contenedor_serie_hawkeye contenedor_serie_sheHulk contenedor_serie_daredevil"
+    "contenedor_serie_hawkeye contenedor_serie_sheHulk contenedor_serie_daredevil"
+    "footer footer footer"
+    ;
+}
+
+
+.gridPadreNoticias {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "contenedor_noticia_daredevilSheHulk"
+    "contenedor_noticia_hombreLoboNoche"
+    "contenedor_noticia_blackPanter"
+    "footer"
+    ;
+}
+
+.gridPadreContacto {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "parrafo_contacto"
+    "contenedor_formulario"
+    "footer"
+    ;
+}
