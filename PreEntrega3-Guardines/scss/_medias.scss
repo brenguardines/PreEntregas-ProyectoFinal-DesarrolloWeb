@@ -1,0 +1,195 @@
+/* TABLETA */
+
+@media (min-width:700px) and (max-width:1100px) {
+
+    .gridPadreIndex {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "parrafo_index imagen_index"
+        "footer footer"
+        ;
+    }
+
+    .gridPadrePeliculas {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "contenedor_pelicula_ironMan contenedor_pelicula_capitanAmerica"
+        "contenedor_pelicula_ironMan contenedor_pelicula_capitanAmerica"
+        "contenedor_pelicula_blackWidow contenedor_pelicula_thor"
+        "contenedor_pelicula_blackWidow contenedor_pelicula_thor"
+        "contenedor_pelicula_spiderMan contenedor_pelicula_losVengadores"
+        "contenedor_pelicula_spiderMan contenedor_pelicula_losVengadores"
+        "footer footer"
+        ;
+    }
+    
+    
+    .gridPadreSeries {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "contenedor_serie_agentsOfShield contenedor_serie_wandaVision"
+        "contenedor_serie_agentsOfShield contenedor_serie_wandaVision"
+        "contenedor_serie_loki contenedor_serie_hawkeye"
+        "contenedor_serie_loki contenedor_serie_hawkeye"
+        "contenedor_serie_sheHulk contenedor_serie_daredevil"
+        "contenedor_serie_sheHulk contenedor_serie_daredevil"
+        "footer footer"
+        ;
+    }
+
+    .gridPadreNoticias {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "contenedor_noticia_daredevilSheHulk"
+        "contenedor_noticia_hombreLoboNoche"
+        "contenedor_noticia_blackPanter"
+        "footer"
+        ;
+    }
+
+    .contenedor_noticia{
+        border: double 2px $color-principal;
+        width: 98%;
+        height: 320px;
+    
+        /* los acomodo con flex */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+
+        .imagen_noticia{
+            width: 250px;
+            height: 150px;
+            margin-left: 10px;
+        }
+    }
+
+    
+
+    .gridPadreContacto {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "parrafo_contacto"
+        "contenedor_formulario"
+        "footer"
+        ;
+    }
+
+}
+
+/* VISTA MOBIL */
+
+@media (max-width:699px) {
+
+    .gridPadreIndex {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "parrafo_index"
+        "imagen_index"
+        "footer"
+        ;
+    }
+
+    .div_inicial {
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+    }
+
+    .parrafo_index {
+        max-width: 70%;
+    }
+
+    .imagen_index {
+        width: 250;
+        height: 125px;
+        margin-top: 100px;
+    }
+
+    .gridPadrePeliculas {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "contenedor_pelicula_ironMan"
+        "contenedor_pelicula_capitanAmerica"
+        "contenedor_pelicula_blackWidow"
+        "contenedor_pelicula_thor"
+        "contenedor_pelicula_spiderMan"
+        "contenedor_pelicula_losVengadores"
+        "footer"
+        ;
+    }
+    
+    
+    .gridPadreSeries {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "contenedor_serie_agentsOfShield"
+        "contenedor_serie_wandaVision"
+        "contenedor_serie_loki"
+        "contenedor_serie_hawkeye"
+        "contenedor_serie_sheHulk"
+        " contenedor_serie_daredevil"
+        "footer"
+        ;
+    }
+
+    .gridPadreNoticias {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "contenedor_noticia_daredevilSheHulk"
+        "contenedor_noticia_hombreLoboNoche"
+        "contenedor_noticia_blackPanter"
+        "footer"
+        ;
+    }
+
+    .contenedor_noticia {
+        border: double 2px $color-principal;
+        width: 275px;
+        height: 670px;
+    
+        /* los acomodo con flex */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        .imagen_noticia{
+            width: 225px;
+            height: 125px;
+            margin-top: 2px;
+            margin-right: 15px;
+        
+        }
+
+    }
+    
+    
+
+    .gridPadreContacto {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "parrafo_contacto"
+        "contenedor_formulario"
+        "footer"
+        ;
+    }
+
+}

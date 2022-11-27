@@ -1,0 +1,41 @@
+footer{
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+    grid-area: footer;
+
+    .linea {
+        border-top: 1px;
+        border-bottom: 1px;
+        min-height: 1px;
+        padding: 0;
+        background: black;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+
+        .redes{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .texto_footer{
+        color: #999;
+        font: 12px Roboto, sans-serif;
+        text-decoration: none;
+        margin-top: 10px;
+    
+        a {
+            color: #999;
+        }
+    }
+    
+}
+
+
+
+
+
